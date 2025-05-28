@@ -6,7 +6,7 @@ defined by the following property :
 
 - ```porder[k] == i``` means that i is the k-th node in the post-order.
 ### See also
-- [`etree`](@link)
+- [`etree`](@ref)
 """
 function postorder(parent)
 
