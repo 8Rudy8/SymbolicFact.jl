@@ -19,7 +19,7 @@ function supernodecount(p)
 		end
 	end
 	for i=1:n
-		if (np[i]>0) || (p[i] >= 0)
+		if (p[i] >= 0)
 			np[i] = np[i] + 1
 		end
 	end
