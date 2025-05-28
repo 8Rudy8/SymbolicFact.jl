@@ -68,6 +68,9 @@ Return the **row count of the R factor** of `A`. If A is non-symmetric, return a
 	   | 1|         | 3|
 	   +--+         +--+
 
+### note
+The supernodes detected in this function are only linear supernodes. To detect more complexe supernodes,
+an amalgamation tree is needed, wich is not implemented in this package
 ### See also
 - [`etree`](@ref)
 - [`postorder`](@ref)
