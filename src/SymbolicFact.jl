@@ -43,8 +43,8 @@ module SymbolicFact
 - `idxc::Set`:
 
 ### See also
-- [`etree`](@link)
-- [`rowcolcount!`](@link)
+- [`etree`](@ref)
+- [`rowcolcount!`](@ref)
 """
 struct Snode
 	father ::Int 
@@ -70,11 +70,11 @@ Make the symbolic factorization of `A`.
 Return a `Vector` containing the symbolic factorization informations. Each element of it is an instance of [`Snode`](@link) representing a column.
 
 ### See also
-- [`etree`](@link)
-- [`Snode`](@link)
-- [`rowcolcount!`](@link)
-- [`supernodecount`](@link)
-- [`idx_r`](@link)
+- [`etree`](@ref)
+- [`Snode`](@ref)
+- [`rowcolcount!`](@ref)
+- [`supernodecount`](@ref)
+- [`idx_r`](@ref)
 """
 function symbolicfact(A,supernodes = true)
 	elimtree = etree(A)
