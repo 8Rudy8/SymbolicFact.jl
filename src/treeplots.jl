@@ -8,8 +8,8 @@ it for graph with more than **50** nodes.
 - `p::Vector{Int}`: the parent `Vector` of the tree
 - `porder::Vector{Int}`: the post-order of the tree, if specified, each node value will be plotted with its port-order number with the format '**value : number**'.
 ### See also
-- [`etree`](@link)
-- [`postorder`](@link)
+- [`etree`](@ref)
+- [`postorder`](@ref)
 """
 function treeplot(p,porder=[])
 	#creating graph
@@ -46,9 +46,9 @@ Plot the elimination tree contained in `p`, with **`p` reflecting supernodes**.\
 - `porder::Vector{Int}`: The post-order of the tree.
 - `showall::Bool`: If `true`, each values of the subnodes are plotted. If `false`, just the first and the last subnode of a supernode are plotted.
 ### See also
-- [`etree`](@link)
-- [`postorder`](@link)
-- [`rowcolcount!`](@link)
+- [`etree`](@ref)
+- [`postorder`](@ref)
+- [`rowcolcount!`](@ref)
 """
 function super_treeplot(p,porder,showall:: Bool = false)
 	#creating graph
@@ -112,9 +112,9 @@ Plot the Tree described by the `parent` list in you navigator thanks to the `D3T
 This function is **not able to plot forests** yet.
 
 ### See also
-- [`etree`](@link)
-- [`postorder`](@link)
-- [`D3Trees.jl`](@link)
+- [`etree`](@ref)
+- [`postorder`](@ref)
+- [`D3Trees.jl`](@ref)
 """
 function D3_treeplot(parent,nav::String="firefox";porder::Vector{Any}=[],title::String="Tree")
 	##TO UPDATE FOR PLOTTING FORESTS
