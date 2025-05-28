@@ -32,8 +32,8 @@ Return the row indices of each non-zeros element per column, fill-in coef includ
 For reasons of optimization, this function **does not work for symmetric matrices** yet.
 
 ### See also
-- [`etree`](@link)
-- [`porder`](@link)
+- [`etree`](@ref)
+- [`porder`](@ref)
 """
 function idx_r(A,p,porder)
 	@assert issymmetric(A)
