@@ -16,10 +16,7 @@ function supernodecount(p)
 		if p[i]<0
 			#i is the subnode of the supernode -p[i]
 			np[-p[i]] = np[-p[i]]+1
-		end
-	end
-	for i=1:n
-		if (p[i] >= 0)
+		else
 			np[i] = np[i] + 1
 		end
 	end
