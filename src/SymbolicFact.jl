@@ -40,7 +40,7 @@ module SymbolicFact
 - `rc::Int`: The **row count** of the considered node, equal `0` if the node is a subnode.
 - `cc:Int`: The **column count** of the considered node, equal `-1` if there is no column count.
 - `idxr::Set`: The **row indices** of the left column of the front matrix. Equal `Set([])` if the node considered is a subnode.
-- `idxc::Set`:
+- `idxc::Set`: Not implemented
 
 ### See also
 - [`etree`](@ref)
