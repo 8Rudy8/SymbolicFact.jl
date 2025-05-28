@@ -6,8 +6,8 @@ Count the number of node in each supernode of `p`, **return** the result with a 
 - `supernodecount(p)[i] == j` means that the supernode `i` is made of `j` nodes.
 - `supernodecount(p)[i] == 0` means that the node `i` is a subnode.
 ### See also
-- [`etree`](@link)
-- [`rowcolcount!`](@link)
+- [`etree`](@ref)
+- [`rowcolcount!`](@ref)
 """
 function supernodecount(p)
 	n = length(p)
