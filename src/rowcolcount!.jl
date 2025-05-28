@@ -69,8 +69,8 @@ Return the **row count of the R factor** of `A`. If A is non-symmetric, return a
 	   +--+         +--+
 
 ### See also
-- [`etree`](@link)
-- [`postorder`](@link)
+- [`etree`](@ref)
+- [`postorder`](@ref)
 """
 function rowcolcount!(A,parent,porder,supernodes::Bool=false)
 	n = length(porder)
