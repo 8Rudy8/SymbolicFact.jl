@@ -5,6 +5,7 @@ makedocs(
     sitename = "SymbolicFact",
     format = Documenter.HTML(),
     modules = [SymbolicFact]
+    remotes  = nothing
 )
 
 # Documenter can also automatically deploy documentation to gh-pages.
