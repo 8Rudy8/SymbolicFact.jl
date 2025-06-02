@@ -1,6 +1,6 @@
 # SymbolicFact.jl
 
-Documentation for SymbolicFact.jl
+## Computing functions
 
 ```@docs
 SymbolicFact.symbolicfact
@@ -11,4 +11,12 @@ SymbolicFact.postorder
 SymbolicFact.rowcolcount!
 SymbolicFact.idx_r
 SymbolicFact.supernodecount
+```
+
+## Plotting functions
+
+```@docs
+SymbolicFact.treeplot
+SymbolicFact.D3_treeplot
+SymbolicFact.super_treeplot
 ```
