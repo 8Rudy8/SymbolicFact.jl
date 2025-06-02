@@ -42,7 +42,7 @@ end
 Plot the elimination tree contained in `p`, with **`p` reflecting supernodes**.\n
 
 ## Arguments
-- `p::Vector{Int}`: Represents parent list of the tree, can reflect supernodes with the structure given by the [`rowcolcount!`](@link) function. In this case, supernodes will be plotted with the format **first node** : **subnodes**.
+- `p::Vector{Int}`: Represents parent list of the tree, can reflect supernodes with the structure given by the [`rowcolcount!`](@ref) function. In this case, supernodes will be plotted with the format **first node** : **subnodes**.
 - `porder::Vector{Int}`: The post-order of the tree.
 - `showall::Bool`: If `true`, each values of the subnodes are plotted. If `false`, just the first and the last subnode of a supernode are plotted.
 ### See also
@@ -102,7 +102,7 @@ Plot the Tree described by the `parent` list in you navigator thanks to the `D3T
 
 ## Arguments
 - `parent::Vector{Int}`: The parent `Vector` of the tree.
-- `nav::String`: the name of the navigator used to plot the tree, do not forget to precise wich navigator you are using if it's not `"firefox"`. To get more details, see [`D3Trees.jl`](@link) doc.
+- `nav::String`: the name of the navigator used to plot the tree, do not forget to precise wich navigator you are using if it's not `"firefox"`. To get more details, see [`D3Trees.jl`](@ref) doc.
 
 ## Keywords arguments
 - `porder::Vector{Int}`: If specified, the post-order of a node will be plotted while hovering it.
