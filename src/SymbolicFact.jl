@@ -69,6 +69,9 @@ Make the symbolic factorization of `A`.
 ## Return
 Return a `Vector` containing the symbolic factorization informations. Each element of it is an instance of [`Snode`](@link) representing a column.
 
+### note
+This function does not include fill reducing permutations.
+
 ### See also
 - [`etree`](@ref)
 - [`Snode`](@ref)
