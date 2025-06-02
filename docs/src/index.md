@@ -10,5 +10,5 @@ SymbolicFact.etree
 SymbolicFact.postorder
 SymbolicFact.rowcolcount!
 SymbolicFact.idx_r
-SymoblicFact.supernodecount
+SymbolicFact.supernodecount
 ```
