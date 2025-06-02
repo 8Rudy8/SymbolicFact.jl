@@ -3,7 +3,7 @@
 Documentation for SymbolicFact.jl
 
 ```@docs
-SymbolicFact.symbolicfact
+symbolicfact
 SymbolicFact.Snode
 SymbolicFact.fill_reducing_perm
 SymbolicFact.etree
