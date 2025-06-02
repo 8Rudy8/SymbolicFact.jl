@@ -11,5 +11,5 @@ makedocs(
 # See "Hosting Documentation" and deploydocs() in the Documenter manual
 # for more information.
 deploydocs(
-    repo = "<repository url>"
+    repo = "https://github.com/8Rudy8/SymbolicFact.jl"
 )
