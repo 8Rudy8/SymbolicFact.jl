@@ -65,4 +65,41 @@ julia> treeplot(tree,a_path,porder)
  RGBA{N0f8}(1.0,1.0,1.0,1.0) ...
  ... 
 ```
+![elimination tree of M with postorder](/img/porderpippo.png)
+
+Then compute the row counts:
+```julia
+julia> rowcolcount!(M,tree,porder)
+5-element Vector{Int64}:
+ 3
+ 4
+ 3
+ 2
+ 1
+```
+And even detect supernodes at the same time:
+```julia
+julia> rowcolcount!(M,tree,porder,true)
+5-element Vector{Int64}:
+ 3
+ 4
+ 3
+ 0
+ 0
+julia> tree
+5-element Vector{Int64}:
+  3
+  3
+  0
+ -3
+ -3
+```
+Now that the supernodal structure is reflected by the tree, plot it with [`supertreeplot`](/src/treeplots.jl) function :
+```julia
+julia> super_treeplot(tree,a_path,porder)
+157×179 Array{RGBA{N0f8},2} with eltype ColorTypes.RGBA{FixedPointNumbers.N0f8}:
+ RGBA{N0f8}(1.0,1.0,1.0,1.0) ...
+ ...
+```
+![elimination tree of M with supernodes](/img/superpippo.png)
  
