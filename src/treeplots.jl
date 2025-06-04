@@ -1,17 +1,21 @@
 """
-	treeplot(p[,porder])
+	treeplot(p,path[,porder;filename = "mytree"])
 
 Plot the tree/forest `p` thanks to the `GraphvitzDotLang` pkg.\n
 The resolution of the plotted graph is limited, it is not adviced to use
 it for graph with more than **50** nodes.
 ## Arguments
 - `p::Vector{Int}`: the parent `Vector` of the tree
+- `path::String`: the path that leads where the png will be downloaded
 - `porder::Vector{Int}`: the post-order of the tree, if specified, each node value will be plotted with its port-order number with the format '**value : number**'.
+
+### kwargs
+- `filename::String`: If you want to rename the png
 ### See also
-- [`etree`](@ref)
-- [`postorder`](@ref)
+- [`etree`](@link)
+- [`postorder`](@link)
 """
-function treeplot(p,porder=[])
+function treeplot(p,path,porder=[];filename::String = "mytree")
 	#creating graph
 	g = digraph(rankdir="BT")
 	if (porder == [])
@@ -32,8 +36,11 @@ function treeplot(p,porder=[])
 			end	
 		end
 	end
-	save(g,"/tmp/pippo.png",engine="dot", format="png")
-	img = load("/tmp/pippo.png")
+	if (path[end] != '/') 
+		path = path*"/"
+	end
+	save(g,path*filename*".png",engine="dot", format="png")
+	img = load(path*filename*".png")
 end
 
 """
