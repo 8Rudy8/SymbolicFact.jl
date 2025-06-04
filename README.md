@@ -33,7 +33,6 @@ julia> M = sparse([1,1,1,2,2,2,2,3,3,3,3,4,4,4,5,5,5],[1,3,4,2,3,4,5,1,2,3,5,1,2
  ⋅  1  1  ⋅  1
 ```
 Compute the elimination tree with [`etree`](src/etree.jl):
-
 ```julia
 julia> tree = etree(M)
 5-element Vector{Int64}:
@@ -47,7 +46,23 @@ We can plot it :
 ```julia
 julia> treeplot(tree,a_path)
 347×179 Array{RGBA{N0f8},2} with eltype ColorTypes.RGBA{FixedPointNumbers.N0f8}:
-...
+ RGBA{N0f8}(1.0,1.0,1.0,1.0) ...
+ ...
 ```
+ ![elimination tree of M](/img/pippo.png)
 
- ![Tux, the Linux mascot](/assets/images/tux.png)
+Copmpute it's postorder and also plot it :
+```julia
+julia> porder = postorder(tree)
+5-element Vector{Int64}:
+ 1
+ 2
+ 3
+ 4
+ 5
+julia> treeplot(tree,a_path,porder)
+347×179 Array{RGBA{N0f8},2} with eltype ColorTypes.RGBA{FixedPointNumbers.N0f8}:
+ RGBA{N0f8}(1.0,1.0,1.0,1.0) ...
+ ... 
+```
+ 
