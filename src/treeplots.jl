@@ -4,6 +4,7 @@
 Plot the tree/forest `p` thanks to the `GraphvitzDotLang` pkg.\n
 The resolution of the plotted graph is limited, it is not adviced to use
 it for graph with more than **50** nodes.
+
 ## Arguments
 - `p::Vector{Int}`: the parent `Vector` of the tree
 - `path::String`: the path that leads where the png will be downloaded
@@ -44,20 +45,25 @@ function treeplot(p,path,porder=[];filename::String = "mytree")
 end
 
 """
-	super_treeplot(p,porder[,showall = false])
+	super_treeplot(p,path,porder[,showall = false])
 
 Plot the elimination tree contained in `p`, with **`p` reflecting supernodes**.\n
 
 ## Arguments
-- `p::Vector{Int}`: Represents parent list of the tree, can reflect supernodes with the structure given by the [`rowcolcount!`](@ref) function. In this case, supernodes will be plotted with the format **first node** : **subnodes**.
+- `p::Vector{Int}`: Represents parent list of the tree, can reflect supernodes with the structure given by the [`rowcolcount!`](@link) function. In this case, supernodes will be plotted with the format **first node** : **subnodes**.
+- `path::String`: the path that leads where the png will be downloaded
 - `porder::Vector{Int}`: The post-order of the tree.
 - `showall::Bool`: If `true`, each values of the subnodes are plotted. If `false`, just the first and the last subnode of a supernode are plotted.
+
+### kwargs
+- `filename::String`: modify the name of the file generated 
+
 ### See also
-- [`etree`](@ref)
-- [`postorder`](@ref)
-- [`rowcolcount!`](@ref)
+- [`etree`](@link)
+- [`postorder`](@link)
+- [`rowcolcount!`](@link)
 """
-function super_treeplot(p,porder,showall:: Bool = false)
+function super_treeplot(p,path,porder,showall:: Bool = false;filename::String = "mysuperTree")
 	#creating graph
 	g = digraph(rankdir="BT")
 	i = 1
@@ -97,9 +103,12 @@ function super_treeplot(p,porder,showall:: Bool = false)
 			end
 		end
 	end
+	if (path[end] != '/')
+		path = path*"/"
+	end
 	#plot the graph
-	save(g,"/tmp/pippo.png",engine="dot", format="png")
-	img = load("/tmp/pippo.png")
+	save(g,path*filename*".png",engine="dot", format="png")
+	img = load(path*filename*".png")
 end
 
 """
