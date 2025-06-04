@@ -45,5 +45,9 @@ julia> tree = etree(M)
 ```
 We can plot it : 
 ```julia
-julia> treeplot(tree,path)
+julia> treeplot(tree,a_path)
+347×179 Array{RGBA{N0f8},2} with eltype ColorTypes.RGBA{FixedPointNumbers.N0f8}:
+...
 ```
+
+ ![Tux, the Linux mascot](/assets/images/tux.png)
