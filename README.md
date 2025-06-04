@@ -94,7 +94,7 @@ julia> tree
  -3
  -3
 ```
-Now that the supernodal structure is reflected by the tree, plot it with [`supertreeplot`](/src/treeplots.jl) function :
+Now that the supernodal structure is reflected by the tree, plot it with [`supertreeplot`](/src/treeplots.jl) function:
 ```julia
 julia> super_treeplot(tree,a_path,porder)
 157×179 Array{RGBA{N0f8},2} with eltype ColorTypes.RGBA{FixedPointNumbers.N0f8}:
@@ -102,4 +102,25 @@ julia> super_treeplot(tree,a_path,porder)
  ...
 ```
 ![elimination tree of M with supernodes](/img/superpippo.png)
- 
+
+Get the size of supernodes :
+```julia
+julia> supernodecount(tree)
+5-element Vector{Int64}:
+ 1
+ 1
+ 3
+ 0
+ 0
+```
+
+Do this all at once with the [`symbolicfact`](/src/SymbolicFact.jl) function:
+```julia
+julia> symbolicfact(M)
+5-element Vector{Snode}:
+ Snode(3, 3, -1, Set(Any[4, 3, 1]), Set{Any}(), 1)
+ Snode(3, 4, -1, Set(Any[5, 4, 2, 3]), Set{Any}(), 1)
+ Snode(0, 3, -1, Set(Any[5, 4, 3]), Set{Any}(), 3)
+ Snode(-3, 0, -1, Set{Any}(), Set{Any}(), 0)
+ Snode(-3, 0, -1, Set{Any}(), Set{Any}(), 0)
+```
