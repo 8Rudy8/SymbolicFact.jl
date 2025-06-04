@@ -94,7 +94,7 @@ julia> tree
  -3
  -3
 ```
-Now that the supernodal structure is reflected by the tree, plot it with [`supertreeplot`](/src/treeplots.jl) function:
+Now that the supernodal structure is reflected by the tree, plot it with [`super_treeplot`](/src/treeplots.jl) function:
 ```julia
 julia> super_treeplot(tree,a_path,porder)
 157×179 Array{RGBA{N0f8},2} with eltype ColorTypes.RGBA{FixedPointNumbers.N0f8}:
