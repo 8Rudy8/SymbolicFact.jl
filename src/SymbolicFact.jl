@@ -32,7 +32,7 @@ module SymbolicFact
 	include("supernodecount.jl")
 	include("treeplots.jl")
 """
-	Snode(father::Int,rc::Int,cc::Int,idxr::Int,idxc::Int)
+	Snode(father::Int,rc::Int,cc::Int,idxr::Set,idxc::Set,np::Int,porder::Int)
 `DataType` made for containing the informations of symbolic factorization. Represent a node or a supernode of an elimination tree.
 
 ## Attributes
