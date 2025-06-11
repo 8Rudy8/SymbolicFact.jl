@@ -66,7 +66,7 @@ end
 Make the symbolic factorization of `A`.
 
 ## Arguments
-- `A::SparseMatrixCSC`: the sparse matrix that will be factorized
+- `A::SparseMatrixCSC{Float64,Int}`: the sparse matrix that will be factorized
 - `supernodes::Bool`: If `true`, the structure returned will reflect supernode detected by the algo. See [`rowcolcount!`](@link) for the detail.
 
 ## Return
