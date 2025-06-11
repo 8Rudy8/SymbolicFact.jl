@@ -43,7 +43,7 @@ end
 Return the **row count of the R factor** of `A`. If A is non-symmetric, return a `Tuple` containing the **row count** of **R** factor and the **column count** of **Q** factor.\n
 
 ## Arguments
-- `A::SparseMatrixCSC{Int,Int}`: The sparse matrix on wich the count are computed.
+- `A::SparseMatrixCSC{Float64,Int}`: The sparse matrix on wich the count are computed.
 - `parent::Vector{Int}`: The parent list of the tree.
 - `porder::Vector{Int}`: The post-order of the tree.
 - `supernodes::Bool`: If `true`, detect supernodes of the tree and modify the ```porder``` and ```parent``` structure to reflect the supernodes. This structure is detailed under. 
