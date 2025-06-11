@@ -35,7 +35,7 @@ This function returns the elimination tree of the matrix A, `parent`, defined by
 - `parent(i) == 0`, means that `i` has no parents.
 
 ## Arguments
-- `A::SparsematrixCSC{Int,Int}`: the matrix used to create the elimination Tree. If `A` is non-symmetric, the tree computed will be the one of produce of  transposed `A`  and `A`.
+- `A::SparsematrixCSC{Float64,Int}`: the matrix used to create the elimination Tree. If `A` is non-symmetric, the tree computed will be the one of produce of  transposed `A`  and `A`.
 """
 function etree(A)
     #ancestor is used for doing path compression
