@@ -24,7 +24,7 @@ Return the row indices of each non-zeros element per column, fill-in coef includ
 
 ## Arguments
 
-- `A::SparseMatrixCSC{Int,Int}`: The matrix computed, have to be structurally symmetric.
+- `A::SparseMatrixCSC{Float64,Int}`: The matrix computed, have to be structurally symmetric.
 - `p::Vector{Int}`: The elimination tree of the matrix, can reflect or not supernodes.
 - `porder::Vector{Int}`: The post-order of the tree.
 
