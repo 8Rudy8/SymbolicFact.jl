@@ -88,14 +88,14 @@ function symbolicfact(A,supernodes = true)
 		for i = 1:n
 			#we set the column count to -1 to make difference beetween
 			#no column count and column count equal 0
-			result[i] = Snode(elimtree[i],rowcount[i],-1,idxr[i],Set(),np[i],porder[i])
+			result[i] = Snode(elimtree[i],rowcount[i],-1,idxr[i],Set(),np[i],findall(x -> x== i,porder)[1])
 		end
 	else
 		rowcount,colcount = rowcolcount!(A,elimtree,porder,supernodes)
 		np = supernodecount(elimtree)
 		#idxr = idx_r(B,elimtree,porder) #not implemented yet for a non-symmetric matrix
 		for i = 1:n
-			result[i] = Snode(elimtree[i],rowcount[i],colcount[i], Set(),Set(),np[i],porder[i])
+			result[i] = Snode(elimtree[i],rowcount[i],colcount[i], Set(),Set(),np[i],findall(x -> x== i,porder)[1])
 		end
 	end
 	return result
